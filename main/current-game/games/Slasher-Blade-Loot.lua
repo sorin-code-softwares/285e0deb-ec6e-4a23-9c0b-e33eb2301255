@@ -60,7 +60,7 @@ return function(Tab, Aurexis, Window, ctx)
     ----------------------------------------------------------------
 
     local scripts = {
-        { name = "Autofarm", url = "https://raw.githubusercontent.com/sorin-code-softwares/open-codes/main/Slasher-lade-Loot.lua", description = "No UI, kill Aura | Good Script" },
+        { name = "Autofarm", url = "https://raw.githubusercontent.com/sorin-code-softwares/open-codes/main/Slasher-Blade-Loot.lua", description = "No UI, kill Aura | Good Script" },
 
     }
     
