@@ -61,7 +61,7 @@ return function(Tab, Aurexis, Window, ctx)
 
     local scripts = {
         { name = "NPC-or-DIE Script", url = "https://raw.githubusercontent.com/DespiseBlockier/RobloxScripts/main/BeNpcOrDie/Main.lua" },
-        { name = "ESP, Aimbot and more", url = "https://raw.githubusercontent.com/Hjgyhfyh/Scripts-roblox/refs/heads/main/NPC_OR_DIE" },
+        { name = "Script NPC Or Die", url = "https://raw.githubusercontent.com/Hjgyhfyh/Scripts-roblox/refs/heads/main/NPC_OR_DIE" },
 
     }
     
