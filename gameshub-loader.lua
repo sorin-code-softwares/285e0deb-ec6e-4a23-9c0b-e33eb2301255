@@ -27,12 +27,12 @@ Aurexis:Notification({ Title="Sorin Script Hub", Icon="emoji_emotions", ImageSou
 
 -- 3) Remote modules
 local TABS = {
-    FEScripts        = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/FE-Scripts.lua",
-    UniversalScripts = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/UniversalScripts.lua",
-    HubInfo          = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/HubInfo.lua",
-    VisualsGraphics  = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/visuals_and_graphics.lua",
-    CurrentGame      = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/game-loader.lua",
-    ManagerCfg       = "https://github.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/manager.lua",
+    FEScripts        = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/FE-Scripts.lua",
+    UniversalScripts = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/UniversalScripts.lua",
+    HubInfo          = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/HubInfo.lua",
+    VisualsGraphics  = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/visuals_and_graphics.lua",
+    CurrentGame      = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/game-loader.lua",
+    ManagerCfg       = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/manager.lua",
 }
 
 -- 4) Helpers (no cachebusters on raw)
