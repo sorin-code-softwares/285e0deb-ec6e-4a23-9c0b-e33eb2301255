@@ -101,8 +101,8 @@ local entries = {
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/NPC-or-DIE.lua",
     },
     {
-        placeId = 11276071411,
-        universeId = 4019583467,
+        placeId = 99827026339186,
+        universeId = 8796373417,
         name = "Slasher Blade Loot",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Slasher-Blade-Loot.lua",
     },
