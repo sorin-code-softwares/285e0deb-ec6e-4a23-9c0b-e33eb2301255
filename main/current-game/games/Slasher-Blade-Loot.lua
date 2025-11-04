@@ -61,7 +61,7 @@ return function(Tab, Aurexis, Window, ctx)
 
     local scripts = {
         { name = "Autofarm", url = "https://raw.githubusercontent.com/sorin-code-softwares/open-codes/main/Slasher-Blade-Loot.lua", description = "No UI, kill Aura | Good Script" },
-
+        { name = "Combo Wick", url = "https://raw.githubusercontent.com/checkurasshole/Script/refs/heads/main/loaderfree", description = "Doesn´t work on Exec like Solara | Good Script" },
     }
     
     -- Sort: recommended first, then alphabetically within group
