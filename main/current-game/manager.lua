@@ -112,6 +112,12 @@ local entries = {
         name = "Answer or Die",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Answer-Or-Die.lua",
     },
+    {
+        placeId = 125723653259639,
+        universeId = 7204130482,
+        name = "Drill Digging Simulator",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Drill-Digging-Simulator.lua",
+    },
 }
 
 
