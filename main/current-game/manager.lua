@@ -130,6 +130,12 @@ local entries = {
         name = "Car Crushers 2",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Car-Crushers-2.lua",
     },
+    {
+        placeId = 121864768012064,
+        universeId = 6701277882,
+        name = "Fish It",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Fish-It.lua",
+    },
 }
 
 
