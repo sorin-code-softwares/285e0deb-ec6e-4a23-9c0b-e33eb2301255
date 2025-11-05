@@ -106,6 +106,12 @@ local entries = {
         name = "Slasher Blade Loot",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Slasher-Blade-Loot.lua",
     },
+    {
+        placeId = 11966456877,
+        universeId = 4234745929,
+        name = "Answer or Die",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Answer-Or-Die.lua",
+    },
 }
 
 
