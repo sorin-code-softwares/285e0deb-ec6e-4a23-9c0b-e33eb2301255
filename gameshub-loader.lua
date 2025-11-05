@@ -32,7 +32,7 @@ local TABS = {
     HubInfo          = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/HubInfo.lua",
     VisualsGraphics  = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/visuals_and_graphics.lua",
     CurrentGame      = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/game-loader.lua",
-    ManagerCfg       = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/manager.lua",
+    ManagerCfg       = "https://scripts.sorinservice.online/sorin/game-manager",
 }
 
 -- 4) Helpers (no cachebusters on raw)
