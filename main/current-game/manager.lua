@@ -118,6 +118,12 @@ local entries = {
         name = "Drill Digging Simulator",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Drill-Digging-Simulator.lua",
     },
+    {
+        placeId = 142823291,
+        universeId = 66654135,
+        name = "Murder Mystery 2",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/mm2.lua",
+    },
 }
 
 
