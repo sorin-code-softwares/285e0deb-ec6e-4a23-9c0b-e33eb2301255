@@ -11,7 +11,7 @@ return function(Tab, Aurexis, Window, ctx)
 
         -- Beschreibung zusammensetzen
         if opts.recommended and not opts.description then
-            opts.description = "✓ Recommended by Sorin"
+            opts.description = " | Good Script"
         end
 
         if opts.keyRequired then
@@ -61,8 +61,7 @@ return function(Tab, Aurexis, Window, ctx)
 
     local scripts = {
         { name = "Golden Hub", url = "https://pastefy.app/AxxGMYly/raw", description = "ESP, Speed ect" },
-        { name = "", url = "" },
-        { name = "", url = "" },
+        { name = "vinhfat Hub", url = "https://gist.githubusercontent.com/vinhxdev/e92f38aeb4ac30416a00042008f11e52/raw/f30db37119ab0888d1738ac02012f92dc4876f25/main.lua", recommended = true },
     }
     
     -- Sort: recommended first, then alphabetically within group
