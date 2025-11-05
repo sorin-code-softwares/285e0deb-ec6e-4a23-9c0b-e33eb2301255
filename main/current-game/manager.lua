@@ -136,6 +136,12 @@ local entries = {
         name = "Fish It",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Fish-It.lua",
     },
+    {
+        placeId = 135856908115931,
+        universeId = 7219654364,
+        name = "Murderers VS Sheriffs",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Murderers-VS-Sheriffs.lua",
+    },
 }
 
 
