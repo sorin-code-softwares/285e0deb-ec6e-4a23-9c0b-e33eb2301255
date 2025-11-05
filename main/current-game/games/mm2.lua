@@ -63,8 +63,8 @@ return function(Tab, Aurexis, Window, ctx)
         { name = "AzureHub", url = "https://raw.githubusercontent.com/Aura-56/MurderMystery2/refs/heads/main/AzureHub.lua" },
         { name = "Vertex Hub", url = "https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring" },
         { name = "Vexon Hub", url = "https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub" },
-        { name = "Express Hub", url = "https://api.luarmor.net/files/v3/loaders/d8824b23a4d9f2e0d62b4e69397d206b.lua" }
-        { name = "Aussie WIRE", url = "https://api.luarmor.net/files/v3/loaders/4f5c7bbe546251d81e9d3554b109008f.lua" }
+        { name = "Express Hub", url = "https://api.luarmor.net/files/v3/loaders/d8824b23a4d9f2e0d62b4e69397d206b.lua" },
+        { name = "Aussie WIRE", url = "https://api.luarmor.net/files/v3/loaders/4f5c7bbe546251d81e9d3554b109008f.lua" },
     }
     
     -- Sort: recommended first, then alphabetically within group
