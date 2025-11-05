@@ -1,4 +1,4 @@
--- current-game/games/Steal a Brainrot.lua
+-- current-game/games/GAMENAME.lua
 return function(Tab, Aurexis, Window, ctx)
 
     local function addScript(displayName, source, opts)
@@ -8,9 +8,20 @@ return function(Tab, Aurexis, Window, ctx)
         if opts.subtext and #opts.subtext > 0 then
             title = title .. " — " .. opts.subtext
         end
+
+        -- Beschreibung zusammensetzen
         if opts.recommended and not opts.description then
             opts.description = "✓ Recommended by Sorin"
         end
+
+        if opts.keyRequired then
+            if opts.description then
+                opts.description = opts.description .. " 🔑 Has a Key System"
+            else
+                opts.description = "🔑 Has a Key System"
+            end
+        end
+
 
         Tab:CreateButton({
             Name = title,
@@ -50,11 +61,9 @@ return function(Tab, Aurexis, Window, ctx)
 
     local scripts = {
         { name = "Chilli Hub", url = "https://raw.githubusercontent.com/tienkhanh1/spicy/main/Chilli.lua", description = "Best one i could find" },
-        { name = "Rift Hub",   url = "https://rifton.top/loader.lua" },
-        { name = "Frostware",  url = "https://raw.githubusercontent.com/Jake-Brock/Scripts/main/Fw%20SAB.lua", description = "Good Script. Using this, will close SorinHub"}
+        { name = "Rift Hub",   url = "https://rifton.top/loader.lua", keyRequired = true  },
+      --{ name = "Frostware",  url = "https://raw.githubusercontent.com/Jake-Brock/Scripts/main/Fw%20SAB.lua", description = "Good Script. Using this, will close SorinHub"}
 
-
-        -- example of raw code (rare): { name="Inline Demo", raw='print("hi")', isRaw=true }
     }
     
     -- Sort: recommended first, then alphabetically within group
@@ -72,9 +81,11 @@ return function(Tab, Aurexis, Window, ctx)
             {
                 subtext     = s.subtext,
                 description = s.description,
-                recommended = s.recommended,
+                recommended = s.recommended, 
+                keyRequired = s.keyRequired,
                 raw         = (s.raw ~= nil)
             }
         )
     end
 end
+   
