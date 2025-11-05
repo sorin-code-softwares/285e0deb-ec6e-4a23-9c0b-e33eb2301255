@@ -124,6 +124,12 @@ local entries = {
         name = "Murder Mystery 2",
         module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/mm2.lua",
     },
+    {
+        placeId = 654732683,
+        universeId = 274816972,
+        name = "Car Crushers 2",
+        module = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/games/Car-Crushers-2.lua",
+    },
 }
 
 
