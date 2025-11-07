@@ -60,9 +60,8 @@ return function(Tab, Aurexis, Window, ctx)
     ----------------------------------------------------------------
 
     local scripts = {
-        { name = "Voidware", url = "https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua" },
-        { name = "", url = "" },
-        { name = "", url = "" },
+        { name = "Voidware", url = "https://raw.githubusercontent.com/VapeVoidware/VWRewrite/main/NewMainScript.lua", description = "Needs a bit to load.." },
+        { name = "Vape V4", url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua" },
     }
     
     -- Sort: recommended first, then alphabetically within group
