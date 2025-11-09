@@ -329,100 +329,6 @@ local Localization = game:GetService("LocalizationService")
 
     local runtimeSection
 
-    local function currentWindowHotkey()
-        if typeof(Window) == "table" then
-            if typeof(Window.GetToggleBindName) == "function" then
-                local ok, name = pcall(Window.GetToggleBindName, Window)
-                if ok and type(name) == "string" and name ~= "" then
-                    return name
-                end
-            end
-            if typeof(Window.Bind) == "EnumItem" then
-                return Window.Bind.Name
-            end
-        end
-        local stored = loadStoredToggleKey and loadStoredToggleKey()
-        if type(stored) == "string" and stored ~= "" then
-            return stored
-        end
-        return "K"
-    end
-
-    local function hotkeyDescription(keyName)
-        local readable = sanitizeToggleKey and sanitizeToggleKey(keyName) or keyName or "K"
-        if not readable or readable == "" then
-            readable = "K"
-        end
-        return string.format("Press %s to reopen the hub after hiding it.", readable)
-    end
-
-    local interfaceSection = Tab:CreateSection("Interface Controls")
-    local initialHotkey = currentWindowHotkey()
-    local hotkeyParagraph = interfaceSection:CreateParagraph({
-        Title = "Visibility Hotkey",
-        Text = hotkeyDescription(initialHotkey),
-        Style = 2,
-    })
-
-    interfaceSection:CreateBind({
-        Name = "Toggle key",
-        Description = "Choose which key should bring the window back after you hide it (default K).",
-        CurrentBind = sanitizeToggleKey and sanitizeToggleKey(initialHotkey) or initialHotkey,
-        Callback = function(newKey)
-            local sanitized = sanitizeToggleKey and sanitizeToggleKey(newKey) or newKey
-            if not sanitized then
-                notify("Toggle key", "Unrecognized key input.", "warning")
-                return
-            end
-
-            local enumValue = resolveToggleKey and (resolveToggleKey(newKey) or resolveToggleKey(sanitized)) or nil
-            if not enumValue then
-                notify("Toggle key", "This key is not supported for toggling.", "warning")
-                return
-            end
-
-            local appliedName = sanitized
-            local updated = false
-
-            if typeof(Window) == "table" and typeof(Window.SetToggleBind) == "function" then
-                local ok, success, message = pcall(Window.SetToggleBind, Window, enumValue)
-                if not ok then
-                    notify("Toggle key", "Update failed: " .. tostring(success), "error")
-                    return
-                end
-                if success == false then
-                    notify("Toggle key", tostring(message or "Rejected"), "warning")
-                    return
-                end
-                appliedName = message or sanitized
-                updated = true
-            elseif typeof(Window) == "table" then
-                Window.Bind = enumValue
-                appliedName = enumValue.Name
-                updated = true
-            end
-
-            if not updated then
-                notify("Toggle key", "Window does not expose a toggle bind API.", "warning")
-                return
-            end
-
-            if saveStoredToggleKey then
-                saveStoredToggleKey(appliedName)
-            end
-
-            if hotkeyParagraph then
-                hotkeyParagraph:Set({
-                    Title = "Visibility Hotkey",
-                    Text = hotkeyDescription(appliedName),
-                })
-            end
-
-            notify("Toggle key", "Hotkey set to " .. tostring(appliedName) .. ".", "check")
-        end,
-    })
-
-    ----------------------------------------------------------------
     -- HTTP helper (supports common exploit request implementations)
     local function resolveRequestFunction()
         local envCandidates = {}
@@ -580,6 +486,99 @@ local Localization = game:GetService("LocalizationService")
             end
         end
     end
+
+    local function currentWindowHotkey()
+        if typeof(Window) == "table" then
+            if typeof(Window.GetToggleBindName) == "function" then
+                local ok, name = pcall(Window.GetToggleBindName, Window)
+                if ok and type(name) == "string" and name ~= "" then
+                    return name
+                end
+            end
+            if typeof(Window.Bind) == "EnumItem" then
+                return Window.Bind.Name
+            end
+        end
+        local stored = loadStoredToggleKey and loadStoredToggleKey()
+        if type(stored) == "string" and stored ~= "" then
+            return stored
+        end
+        return "K"
+    end
+
+    local function hotkeyDescription(keyName)
+        local readable = sanitizeToggleKey and sanitizeToggleKey(keyName) or keyName or "K"
+        if not readable or readable == "" then
+            readable = "K"
+        end
+        return string.format("Press %s to reopen the hub after hiding it.", readable)
+    end
+
+    local interfaceSection = Tab:CreateSection("Interface Controls")
+    local initialHotkey = currentWindowHotkey()
+    local hotkeyParagraph = interfaceSection:CreateParagraph({
+        Title = "Visibility Hotkey",
+        Text = hotkeyDescription(initialHotkey),
+        Style = 2,
+    })
+
+    interfaceSection:CreateBind({
+        Name = "Toggle key",
+        Description = "Choose which key should bring the window back after you hide it (default K).",
+        CurrentBind = sanitizeToggleKey and sanitizeToggleKey(initialHotkey) or initialHotkey,
+        Callback = function(newKey)
+            local sanitized = sanitizeToggleKey and sanitizeToggleKey(newKey) or newKey
+            if not sanitized then
+                notify("Toggle key", "Unrecognized key input.", "warning")
+                return
+            end
+
+            local enumValue = resolveToggleKey and (resolveToggleKey(newKey) or resolveToggleKey(sanitized)) or nil
+            if not enumValue then
+                notify("Toggle key", "This key is not supported for toggling.", "warning")
+                return
+            end
+
+            local appliedName = sanitized
+            local updated = false
+
+            if typeof(Window) == "table" and typeof(Window.SetToggleBind) == "function" then
+                local ok, success, message = pcall(Window.SetToggleBind, Window, enumValue)
+                if not ok then
+                    notify("Toggle key", "Update failed: " .. tostring(success), "error")
+                    return
+                end
+                if success == false then
+                    notify("Toggle key", tostring(message or "Rejected"), "warning")
+                    return
+                end
+                appliedName = message or sanitized
+                updated = true
+            elseif typeof(Window) == "table" then
+                Window.Bind = enumValue
+                appliedName = enumValue.Name
+                updated = true
+            end
+
+            if not updated then
+                notify("Toggle key", "Window does not expose a toggle bind API.", "warning")
+                return
+            end
+
+            if saveStoredToggleKey then
+                saveStoredToggleKey(appliedName)
+            end
+
+            if hotkeyParagraph then
+                hotkeyParagraph:Set({
+                    Title = "Visibility Hotkey",
+                    Text = hotkeyDescription(appliedName),
+                })
+            end
+
+            notify("Toggle key", "Hotkey set to " .. tostring(appliedName) .. ".", "check")
+        end,
+    })
 
     local function isSupabaseConfigured()
         return type(SupabaseConfig.url) == "string"
