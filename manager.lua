@@ -87,6 +87,8 @@ local entries = {
         module = "https://scripts.sorinservice.online/games/drill-digging-simulator",
     },
     {--15
+        placeId = 7711635737,
+        universeId = 2992873140,
         name = "Emergency Hamburg",
         module = "https://scripts.sorinservice.online/games/emergency-hamburg",
     },
