@@ -1,5 +1,5 @@
 -- 1) Load AurexisInterface Library
-local Aurexis = loadstring(game:HttpGet("https://raw.githubusercontent.com/Wyattluber/shub_unstable/main/AurexisLib/main.lua"))()
+local Aurexis = loadstring(game:HttpGet("https://raw.githubusercontent.com/SorinSoftware-Services/AurexisInterfaceLibrary/main/main.lua"))()
 
 -- Toggle key store (backed by Aurexis library)
 local toggleStore
