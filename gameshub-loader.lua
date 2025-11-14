@@ -64,7 +64,6 @@ local TABS = {
     VisualsGraphics  = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/visuals_and_graphics.lua",
     CurrentGame      = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/game-loader.lua",
     ManagerCfg       = "https://scripts.sorinservice.online/sorin/game-manager",
-    Dev              = "https://raw.githubusercontent.com/sorin-code-softwares/285e0deb-ec6e-4a23-9c0b-e33eb2301255/main/main/current-game/Developer.lua"
 }
 
 -- 4) Helpers (no cachebusters on raw)
@@ -129,7 +128,6 @@ attachTab("Universal Scripts",  TABS.UniversalScripts, "admin_panel_settings")
 attachTab("FE Scripts",         TABS.FEScripts,        "insert_emoticon") 
 attachTab("Visuals & Graphics", TABS.VisualsGraphics,  "remove_red_eye")
 attachTab("Hub Info",           TABS.HubInfo,          "info")
-attachTab("Dev",                TABS.Dev,              "settings")
 
 -- Dynamisches Icon je nach Support
 local currentIcon = preCtx and "data_usage" or "_error_outline"
