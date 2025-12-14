@@ -23,17 +23,22 @@ local function pkcs7Pad(text, blockSize)
 end
 
 -- Simple base64 fallback
-local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local b64chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 local function b64encode(data)
-	local bytes = {data:byte(1, #data)}
+	local bytes = { data:byte(1, #data) }
 	local result = {}
 	for i = 1, #bytes, 3 do
-		local a, b, c = bytes[i], bytes[i + 1] or 0, bytes[i + 2] or 0
-		local triple = (a << 16) | (b << 8) | c
-		local idx1 = (triple >> 18) & 0x3F
-		local idx2 = (triple >> 12) & 0x3F
-		local idx3 = (triple >> 6)  & 0x3F
-		local idx4 = triple & 0x3F
+		local a = bytes[i] or 0
+		local b = bytes[i + 1] or 0
+		local c = bytes[i + 2] or 0
+
+		-- combine to 24 bits without bit operators (Luau-compat)
+		local triple = a * 65536 + b * 256 + c
+		local idx1 = math.floor(triple / 262144) % 64          -- 2^18
+		local idx2 = math.floor(triple / 4096) % 64            -- 2^12
+		local idx3 = math.floor(triple / 64) % 64              -- 2^6
+		local idx4 = triple % 64
+
 		table.insert(result, b64chars:sub(idx1 + 1, idx1 + 1))
 		table.insert(result, b64chars:sub(idx2 + 1, idx2 + 1))
 		if bytes[i + 1] then
